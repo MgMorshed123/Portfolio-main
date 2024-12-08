@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/MgMorshed123/Portfolio-main/static/css/main.2b64c6a2.css",
-    "main.js": "/MgMorshed123/Portfolio-main/static/js/main.15a44121.js",
-    "static/media/img3.png": "/MgMorshed123/Portfolio-main/static/media/img3.56fd35a855c691825a80.png",
-    "static/media/FoodWeb.png": "/MgMorshed123/Portfolio-main/static/media/FoodWeb.f1de8c2479e4813cc520.png",
-    "static/media/img4.png": "/MgMorshed123/Portfolio-main/static/media/img4.0f8d8e5019db8e7b9fbb.png",
-    "static/media/01319211609--morshed-.jpg": "/MgMorshed123/Portfolio-main/static/media/01319211609--morshed-.ea13d3f77435a1d6fa92.jpg",
-    "static/media/img1.png": "/MgMorshed123/Portfolio-main/static/media/img1.404f64baf0e5e8935f5c.png",
-    "index.html": "/MgMorshed123/Portfolio-main/index.html",
-    "main.2b64c6a2.css.map": "/MgMorshed123/Portfolio-main/static/css/main.2b64c6a2.css.map",
-    "main.15a44121.js.map": "/MgMorshed123/Portfolio-main/static/js/main.15a44121.js.map"
+    "main.css": "/Portfolio-main/static/css/main.2b64c6a2.css",
+    "main.js": "/Portfolio-main/static/js/main.00f965c4.js",
+    "static/media/img3.png": "/Portfolio-main/static/media/img3.56fd35a855c691825a80.png",
+    "static/media/FoodWeb.png": "/Portfolio-main/static/media/FoodWeb.f1de8c2479e4813cc520.png",
+    "static/media/img4.png": "/Portfolio-main/static/media/img4.0f8d8e5019db8e7b9fbb.png",
+    "static/media/01319211609--morshed-.jpg": "/Portfolio-main/static/media/01319211609--morshed-.ea13d3f77435a1d6fa92.jpg",
+    "static/media/img1.png": "/Portfolio-main/static/media/img1.404f64baf0e5e8935f5c.png",
+    "index.html": "/Portfolio-main/index.html",
+    "main.2b64c6a2.css.map": "/Portfolio-main/static/css/main.2b64c6a2.css.map",
+    "main.00f965c4.js.map": "/Portfolio-main/static/js/main.00f965c4.js.map"
   },
   "entrypoints": [
     "static/css/main.2b64c6a2.css",
-    "static/js/main.15a44121.js"
+    "static/js/main.00f965c4.js"
   ]
 }
