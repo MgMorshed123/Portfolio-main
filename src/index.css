@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --primary-color: "#64FFDA";
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #112240;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: #112240;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #64ffda;
+}
+
+/* Add this CSS to your global stylesheet or in your styles file */
+
+.mantine-Modal-body .mantine-ScrollArea-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.mantine-Modal-body .mantine-ScrollArea-thumb {
+  background-color: #64ffda; /* Change the color of the scrollbar thumb */
+  border-radius: 4px; /* Optional: round the scrollbar thumb */
+}
+
+.mantine-Modal-body .mantine-ScrollArea-track {
+  background: #64ffda; /* Optional: make the track transparent */
+}
+
+.mantine-Modal-body::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+.mantine-Modal-body::-webkit-scrollbar-thumb {
+  background-color: #64ffda; /* Set the color of the thumb */
+  border-radius: 4px; /* Optional: round the scrollbar thumb */
+}
+
+.mantine-Modal-body::-webkit-scrollbar-track {
+  background-color: #64ffda; /* Optional: set track background */
+}
+
+/* Target the scrollbar of the Modal body */
+.mantine-Modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mantine-Modal-body::-webkit-scrollbar-thumb {
+  background-color: #64ffda; /* Customize the thumb color */
+  border-radius: 4px;
+}
+
+.mantine-Modal-body::-webkit-scrollbar-track {
+  background-color: #333; /* Customize the track color */
+}
+
+.mantine-Modal-body::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
