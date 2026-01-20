@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Timeline, useMatches } from "@mantine/core";
 import { IconBriefcaseFilled } from "@tabler/icons-react";
 import { ExperienceInfo } from "../User";
 import { motion } from "framer-motion";
 
-// ------------------ Experience Section ------------------
 const Experience = () => {
   const dotSize = useMatches({ xs: 25, md: 30 });
   const bulletIconSize = useMatches({ xs: 15, md: 20 });
+
+  // Track which timeline item is hovered
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section
@@ -28,6 +30,7 @@ const Experience = () => {
         active={ExperienceInfo.length}
         bulletSize={dotSize}
         lineWidth={2}
+        className="relative"
       >
         {ExperienceInfo.map((item, index) => (
           <Timeline.Item
@@ -38,9 +41,19 @@ const Experience = () => {
                 size={bulletIconSize}
               />
             }
-            className="!pt-12 !mb-2 sm-mx:!p-1"
+            className="!pt-12 !mb-2 sm-mx:!p-1 relative group"
           >
+            {/* Glow line effect */}
+            <div
+              className={`
+                absolute left-[8px] top-0 bottom-0 w-[2px] bg-primaryColor transition-all duration-300
+                ${hoveredIndex === index ? "shadow-[0_0_12px_#64FFDA]" : ""}
+              `}
+            />
+
             <motion.div
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15, duration: 0.5 }}
@@ -53,6 +66,8 @@ const Experience = () => {
                 shadow-[0_0_10px_0_#64FFDA50]
                 bg-gradient-to-br from-black/40 to-black/10
                 transition-all duration-300
+                relative
+                z-10
               "
             >
               {/* Role and Company */}
