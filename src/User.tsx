@@ -278,7 +278,7 @@ const ExperienceInfo = [
   {
     role: "Frondend Developer  Internship",
     company: " Lincoln University College ",
-    date: " Sep 2023- Nov 2023",
+    date: " February 2025- June 2025",
     desc: "During my internship as a Frontend Developer at Lincoln University College from September 2023 to December 2023, I worked closely with a team to design and develop responsive, user-friendly web interfaces. My primary responsibilities included creating and optimizing web pages using modern frontend technologies such as HTML, CSS, and JavaScript, while ensuring seamless cross-browser compatibility. I implemented interactive features to enhance user experience and collaborated with the backend team to integrate APIs effectively. Additionally, I participated in code reviews to maintain code quality and utilized version control systems like Git for efficient project management. This experience allowed me to sharpen my technical skills, improve problem-solving abilities, and gain hands-on experience in delivering high-quality web solutions.",
     skills: [
       "HTML",
