@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import "@mantine/core/styles.css";
 import "./App.css";
 import HomePage from "./Components/HomePage";
-import {
-  HeadlessMantineProvider,
-  MantineProvider,
-  createTheme,
-} from "@mantine/core";
+import { MantineProvider, createTheme } from "@mantine/core";
 import { pdfjs } from "react-pdf";
 import AOS from "aos";
 import "aos/dist/aos.css";

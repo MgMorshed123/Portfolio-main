@@ -1,20 +1,12 @@
 import { Info } from "../User";
 import Typewriter from "typewriter-effect";
-import { Button, useMatches } from "@mantine/core";
 import ResumeViewer from "./ResumeViewer";
 import { useDisclosure } from "@mantine/hooks";
-import { IconDownload } from "@tabler/icons-react";
 import Particles from "./magicui/Particles";
 import { NeonGradientCard } from "./magicui/neon-gradient-card";
 import profile from "../img/01319211609--morshed-.jpg";
 const About = () => {
-  const [opened, { open, close }] = useDisclosure(false);
-  const btn = useMatches({
-    xs: "xs",
-    sm: "sm",
-    md: "md",
-    lg: "lg",
-  });
+  const [opened, { close }] = useDisclosure(false);
   return (
     <>
       <div

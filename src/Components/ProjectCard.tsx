@@ -17,7 +17,7 @@ const ProjectCard = (props: any) => {
     md: "md",
     lg: "lg",
   });
-  const btn = useMatches({
+  useMatches({
     xs: "xs",
     sm: "sm",
     md: "md",
@@ -74,7 +74,7 @@ const ProjectCard = (props: any) => {
                 <Badge key={index} size={badge} variant="light" color="#64FFDA">
                   {tech}
                 </Badge>
-              )
+              ),
           )}
         </Group>
         <Text

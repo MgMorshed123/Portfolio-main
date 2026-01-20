@@ -2,13 +2,13 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-interface MousePosition {
+interface IMousePosition {
   x: number;
   y: number;
 }
 
-function MousePosition(): MousePosition {
-  const [mousePosition, setMousePosition] = useState<MousePosition>({
+function MousePosition(): IMousePosition {
+  const [mousePosition, setMousePosition] = useState<IMousePosition>({
     x: 0,
     y: 0,
   });
@@ -79,14 +79,17 @@ const Particles: React.FC<ParticlesProps> = ({
     return () => {
       window.removeEventListener("resize", initCanvas);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color]);
 
   useEffect(() => {
     onMouseMove();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mousePosition.x, mousePosition.y]);
 
   useEffect(() => {
     initCanvas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refresh]);
 
   const initCanvas = () => {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FloatingInput from "./FloatingInput";
 import { Button, useMatches } from "@mantine/core";
-import { IconArrowRight } from "@tabler/icons-react";
+import * as TablerIcons from "@tabler/icons-react";
 import { validateForm } from "./Validation";
 // import IconTopologyStar3 from "lucide-react";
 
@@ -95,7 +95,7 @@ const Contact = () => {
         <Button
           fullWidth
           onClick={handleSubmit}
-          rightSection={<IconArrowRight size={20} />}
+          rightSection={<TablerIcons.IconArrowRight size={20} />}
           className="!text-bgColor !font-bold "
           variant="filled"
           size={btn}

@@ -87,15 +87,15 @@ const FullProjectModal = (props: any) => {
             {props?.credentials?.adminUser.email}, Passwod :{" "}
             {props?.credentials?.adminUser.password}
           </h1>
- {   props?.credentials?.Doctor ? 
+          {props?.credentials?.Doctor ? (
             <h1 className="text-white">
-            Credentials For Doctor . Email :{" "}
-            {props?.credentials?.Doctor.email}, Passwod :{" "}
-            {props?.credentials?.Doctor.password}
-          </h1>
-   : ''
-
-        }
+              Credentials For Doctor . Email :{" "}
+              {props?.credentials?.Doctor.email}, Passwod :{" "}
+              {props?.credentials?.Doctor.password}
+            </h1>
+          ) : (
+            ""
+          )}
           <Text
             className="!text-justify !text-lg sm-mx:!text-base xs-mx:!text-xs"
             c="dimmed"
@@ -106,6 +106,7 @@ const FullProjectModal = (props: any) => {
             <a
               href={props.server}
               target="_blank"
+              rel="noreferrer"
               className="!w-[30%] sm-mx:!w-[30%]"
             >
               <Button
@@ -122,6 +123,7 @@ const FullProjectModal = (props: any) => {
             <a
               href={props.github}
               target="_blank"
+              rel="noreferrer"
               className="!w-[30%] sm-mx:!w-[30%]"
             >
               <Button
@@ -134,7 +136,12 @@ const FullProjectModal = (props: any) => {
                 Client Code
               </Button>
             </a>
-            <a href={props.link} target="_blank" className="!w-[30%] ">
+            <a
+              href={props.link}
+              target="_blank"
+              rel="noreferrer"
+              className="!w-[30%] "
+            >
               <Button
                 size={btn}
                 color="#64FFDA"
