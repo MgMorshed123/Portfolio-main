@@ -11,59 +11,61 @@ import {
 } from "@mantine/core";
 
 const FullProjectModal = (props: any) => {
-  const download = useMatches({ xs: "xs", md: "sm", lg: "md", bs: "lg" });
-  const techno = useMatches({ xs: "md", sm: "md", md: "lg", bs: "xl" });
-  const btn = useMatches({ xs: "xs", sm: "sm", md: "md", lg: "lg" });
+  const download = useMatches({ xs: "xs", md: "sm", lg: "md" });
+  const techno = useMatches({ xs: "sm", md: "md", lg: "lg" });
+  const btn = useMatches({ xs: "xs", sm: "sm", md: "md" });
 
   return (
-    <Modal.Root
-      scrollAreaComponent={ScrollArea.Autosize}
-      size="auto"
-      centered
-      className="font-mono"
+    <Modal
       opened={props.opened}
       onClose={props.close}
+      centered
+      size="lg"
+      radius="xl"
+      overlayProps={{
+        blur: 4,
+        opacity: 0.85,
+      }}
+      className="font-mono"
     >
-      <Modal.Overlay className="!backdrop-opacity-85 blur-sm webkit-backdrop-filter" />
-      <Modal.Content className="!rounded-3xl">
-        <Modal.Header className="!bg-bgColor xs-mx:!p-2 !border-primaryColor  !border-2 !border-b-0 !rounded-tl-3xl !rounded-tr-3xl">
-          <Modal.Title
-            data-autofocus
-            className="!text-4xl sm-mx:!text-3xl xs-mx:!text-2xl xsm-mx:!text-xl text-white flex gap-3 xs-mx:gap-1 items-center !font-bold"
-          >
-            {props.title}
-            {props.live === true && (
-              <Badge
-                className="flex items-center gap-1"
-                size={download}
-                variant="outline"
-                color="red"
-                rightSection={
-                  <Indicator
-                    color="red"
-                    position="middle-end"
-                    size={10}
-                    processing
-                  ></Indicator>
-                }
-              >
-                Live
-              </Badge>
-            )}
-          </Modal.Title>
-          <Modal.CloseButton
-            size="md"
-            iconSize="30px"
-            className="!bg-bgColor !text-red-500"
-          />
-        </Modal.Header>
-        <Modal.Body className="!bg-bgColor xs-mx:!p-2 !pt-2 !border-primaryColor  !border-2 !border-t-0 !rounded-bl-3xl !rounded-br-3xl">
+      {/* 🔹 Sticky Header */}
+      <Modal.Header className="sticky top-0 z-10 !bg-bgColor border-b border-primaryColor">
+        <Modal.Title className="text-white text-2xl sm:text-xl font-bold flex items-center gap-2">
+          {props.title}
+
+          {props.live && (
+            <Badge
+              size={download}
+              color="red"
+              variant="outline"
+              rightSection={<Indicator color="red" size={8} processing />}
+            >
+              Live
+            </Badge>
+          )}
+        </Modal.Title>
+
+        <Modal.CloseButton className="!text-red-500" />
+      </Modal.Header>
+
+      {/* 🔹 Scrollable Body */}
+      <ScrollArea
+        h="70vh"
+        scrollbarSize={6}
+        offsetScrollbars
+        type="auto"
+        className="px-2"
+      >
+        <Modal.Body className="!bg-bgColor space-y-4">
           <Image
-            className="!rounded-xl !shadow-[0_0_5px_0_#64FFDA] "
             src={props.image}
-            alt={props.image}
+            alt={props.title}
+            radius="md"
+            className="shadow-[0_0_8px_#64FFDA]"
           />
-          <div className="flex flex-wrap gap-3 xs-mx:gap-2 my-3">
+
+          {/* Technologies */}
+          <div className="flex flex-wrap gap-2">
             {props.technologies.map((tech: string, index: number) => (
               <Badge key={index} size={techno} variant="light" color="#64FFDA">
                 {tech}
@@ -71,91 +73,75 @@ const FullProjectModal = (props: any) => {
             ))}
           </div>
 
-          <h1 className="text-white">
-            {props?.credentials ? (
-              <>
-                Credentials For NormalUser. Email :{" "}
-                {props?.credentials?.normalUser.email}, Passwod :{" "}
-                {props?.credentials?.normalUser.password}
-              </>
-            ) : (
-              ""
-            )}
-          </h1>
-          <h1 className="text-white">
-            Credentials For adminUser. Email :{" "}
-            {props?.credentials?.adminUser.email}, Passwod :{" "}
-            {props?.credentials?.adminUser.password}
-          </h1>
-          {props?.credentials?.Doctor ? (
-            <h1 className="text-white">
-              Credentials For Doctor . Email :{" "}
-              {props?.credentials?.Doctor.email}, Passwod :{" "}
-              {props?.credentials?.Doctor.password}
-            </h1>
-          ) : (
-            ""
+          {/* Credentials */}
+          {props.credentials && (
+            <div className="text-white text-sm space-y-1">
+              {props.credentials.normalUser && (
+                <p>
+                  <strong>User:</strong> {props.credentials.normalUser.email} /{" "}
+                  {props.credentials.normalUser.password}
+                </p>
+              )}
+
+              {props.credentials.adminUser && (
+                <p>
+                  <strong>Admin:</strong> {props.credentials.adminUser.email} /{" "}
+                  {props.credentials.adminUser.password}
+                </p>
+              )}
+
+              {props.credentials.Doctor && (
+                <p>
+                  <strong>Doctor:</strong> {props.credentials.Doctor.email} /{" "}
+                  {props.credentials.Doctor.password}
+                </p>
+              )}
+            </div>
           )}
-          <Text
-            className="!text-justify !text-lg sm-mx:!text-base xs-mx:!text-xs"
-            c="dimmed"
-          >
+
+          {/* Description */}
+          <Text c="dimmed" className="text-justify text-base">
             {props.desc}
           </Text>
-          <Group justify="space-between" mt="md" mb={3}>
-            <a
+
+          {/* Buttons */}
+          <Group grow mt="md">
+            <Button
+              component="a"
               href={props.server}
               target="_blank"
-              rel="noreferrer"
-              className="!w-[30%] sm-mx:!w-[30%]"
+              variant="outline"
+              color="#64FFDA"
+              size={btn}
             >
-              <Button
-                variant="outline"
-                size={btn}
-                color="#64FFDA"
-                fullWidth
-                radius="md"
-              >
-                Backend Code
-              </Button>
-            </a>
+              Backend Code
+            </Button>
 
-            <a
+            <Button
+              component="a"
               href={props.github}
               target="_blank"
-              rel="noreferrer"
-              className="!w-[30%] sm-mx:!w-[30%]"
+              variant="outline"
+              color="#64FFDA"
+              size={btn}
             >
-              <Button
-                variant="outline"
-                size={btn}
-                color="#64FFDA"
-                fullWidth
-                radius="md"
-              >
-                Client Code
-              </Button>
-            </a>
-            <a
+              Client Code
+            </Button>
+
+            <Button
+              component="a"
               href={props.link}
               target="_blank"
-              rel="noreferrer"
-              className="!w-[30%] "
+              color="#64FFDA"
+              className="!text-bgColor"
+              size={btn}
             >
-              <Button
-                size={btn}
-                color="#64FFDA"
-                className="!text-bgColor"
-                fullWidth
-                radius="md"
-              >
-                View Live App
-              </Button>
-            </a>
+              View Live
+            </Button>
           </Group>
         </Modal.Body>
-      </Modal.Content>
-    </Modal.Root>
+      </ScrollArea>
+    </Modal>
   );
 };
 
