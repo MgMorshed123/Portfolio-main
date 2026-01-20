@@ -25,7 +25,7 @@ const Info = {
 
 const ProjectInfo = [
   {
-    title: "DB4U",
+    title: "HMI Medical",
     credentials: {
       normalUser: {
         email: "md45@gmail.com",
@@ -40,7 +40,8 @@ const ProjectInfo = [
         password: "12345678",
       },
     },
-    desc: "Doctor For U is designed to connect patients with healthcare professionals seamlessly. The platform enables users to search for doctors, book appointments, and manage their medical records, while doctors can oversee their schedules and update their profiles. Admins can monitor the system, manage doctors, and oversee patient appointments efficiently.",
+
+    desc: "HMI Medical is designed to connect patients with healthcare professionals seamlessly. The platform enables users to search for doctors, book appointments, and manage their medical records, while doctors can oversee their schedules and update their profiles. Admins can monitor the system, manage doctors, and oversee patient appointments efficiently.",
     image: imag7,
     live: true,
     technologies: [
@@ -127,7 +128,9 @@ const ProjectInfo = [
         "Responsive Design: Optimized for a seamless experience across all devices.",
       ],
     },
-    link: "https://job-9.onrender.com",
+
+    link: "https://job-frontend-tg3r.onrender.com/",
+
     github: "https://github.com/MgMorshed123/ClientCarrer",
     server: "https://github.com/MgMorshed123/CarrerCanvasBackend",
   },
@@ -158,53 +161,72 @@ const ProjectInfo = [
       "  MongoDb",
       "Jwt ",
     ],
-    link: "https://zomato-1-uz5r.onrender.com",
+
+    link: "https://zomato-i16i.onrender.com/",
     github: "https://github.com/MgMorshed123/TastyTales",
     server: "https://github.com/MgMorshed123/TastyTales-Backend",
   },
   {
-    title: "Food Hub",
-    desc: "Food Hub is a comprehensive food ordering platform for both users and administrators. Users can explore restaurants, sort by menu offerings, view detailed menus, place orders, make secure payments via Stripe, track order and payment statuses, and review their order history. Administrators can manage restaurant menus, update food availability, and oversee all orders efficiently. With its intuitive interface and robust features, Food Hub ensures a seamless experience for users and streamlined operations for administrators.",
-    image: imag5,
+    title: "Expense Tracker",
+    desc: "Expense Tracker is a user-friendly platform for managing personal finances. Users can add, edit, and delete expenses, filter them by category or date, generate monthly reports, and export their current spending as a PDF. The system also includes OTP verification, password reset, and forgot password functionality for secure access. Default credentials are available in the GitHub repository. With its robust features and intuitive interface, Expense Tracker helps users efficiently manage and monitor their expenses.",
+    image: "imag6",
     live: true,
     technologies: [
       "React",
-      "Typescript",
-      "Tailwind",
-      "ShadCn",
-      "Zustand",
-      "Node",
-      "Express",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
       "MongoDB",
-      "Cloudinary",
-      "Multer",
-      "JWT",
+      "Node-cron",
+      "Nodemailer",
     ],
-    link: "https://foodie-v4qd.onrender.com",
-    github: "https://github.com/MgMorshed123/Food-Hub-Client-",
-    server: "https://github.com/MgMorshed123/Food-HubServer",
+    link: "http://expenss-tracker-frontend.onrender.com/",
+    github: "https://github.com/MgMorshed123/Expenss-Tracker-Frontend",
+    server: "https://github.com/MgMorshed123/Expenss-Tracker-Backend",
   },
-  {
-    title: "Code Academy",
-    desc: "Code Academy is a sleek and modern e-learning platform designed to enhance the online learning experience. Users can effortlessly browse through a variety of courses, toggle between light and dark themes for a personalized interface, and download course materials in PDF format for offline access. The platform also offers seamless login options via GitHub and Google, making it easy and secure for learners to get started. With its intuitive design and essential features, Code Academy provides a user-friendly and accessible solution for anyone looking to expand their knowledge and skills.",
-    image: imag4,
-    live: true,
-    technologies: [
-      "React",
-      "React Router DOM",
-      "Tailwind css",
-      "Firebase",
-      "AOS Animation library",
-      "React-to-PDF",
-      "Node",
-      "Express",
-      "MongoDb",
-      "Jwt",
-    ],
-    link: "https://code-academy-client.web.app",
-    github: "https://github.com/MgMorshed123/CodeAcademy-Client",
-    server: "https://github.com/MgMorshed123/CodeAcademy-server",
-  },
+  // {
+  //   title: "Food Hub",
+  //   desc: "Food Hub is a comprehensive food ordering platform for both users and administrators. Users can explore restaurants, sort by menu offerings, view detailed menus, place orders, make secure payments via Stripe, track order and payment statuses, and review their order history. Administrators can manage restaurant menus, update food availability, and oversee all orders efficiently. With its intuitive interface and robust features, Food Hub ensures a seamless experience for users and streamlined operations for administrators.",
+  //   image: imag5,
+  //   live: true,
+  //   technologies: [
+  //     "React",
+  //     "Typescript",
+  //     "Tailwind",
+  //     "ShadCn",
+  //     "Zustand",
+  //     "Node",
+  //     "Express",
+  //     "MongoDB",
+  //     "Cloudinary",
+  //     "Multer",
+  //     "JWT",
+  //   ],
+  //   link: "https://foodie-v4qd.onrender.com",
+  //   github: "https://github.com/MgMorshed123/Food-Hub-Client-",
+  //   server: "https://github.com/MgMorshed123/Food-HubServer",
+  // },
+  // {
+  //   title: "Code Academy",
+  //   desc: "Code Academy is a sleek and modern e-learning platform designed to enhance the online learning experience. Users can effortlessly browse through a variety of courses, toggle between light and dark themes for a personalized interface, and download course materials in PDF format for offline access. The platform also offers seamless login options via GitHub and Google, making it easy and secure for learners to get started. With its intuitive design and essential features, Code Academy provides a user-friendly and accessible solution for anyone looking to expand their knowledge and skills.",
+  //   image: imag4,
+  //   live: true,
+  //   technologies: [
+  //     "React",
+  //     "React Router DOM",
+  //     "Tailwind css",
+  //     "Firebase",
+  //     "AOS Animation library",
+  //     "React-to-PDF",
+  //     "Node",
+  //     "Express",
+  //     "MongoDb",
+  //     "Jwt",
+  //   ],
+  //   link: "https://code-academy-client.web.app",
+  //   github: "https://github.com/MgMorshed123/CodeAcademy-Client",
+  //   server: "https://github.com/MgMorshed123/CodeAcademy-server",
+  // },
 ];
 
 const SkillInfo = [
@@ -278,7 +300,7 @@ const ExperienceInfo = [
   {
     role: "Frondend Developer  Internship",
     company: " Lincoln University College ",
-    date: " Sep 2023- Nov 2023",
+
     desc: "During my internship as a Frontend Developer at Lincoln University College from September 2023 to December 2023, I worked closely with a team to design and develop responsive, user-friendly web interfaces. My primary responsibilities included creating and optimizing web pages using modern frontend technologies such as HTML, CSS, and JavaScript, while ensuring seamless cross-browser compatibility. I implemented interactive features to enhance user experience and collaborated with the backend team to integrate APIs effectively. Additionally, I participated in code reviews to maintain code quality and utilized version control systems like Git for efficient project management. This experience allowed me to sharpen my technical skills, improve problem-solving abilities, and gain hands-on experience in delivering high-quality web solutions.",
     skills: [
       "HTML",
