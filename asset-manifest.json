@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Portfolio-main/static/css/main.f6d9843d.css",
+    "main.js": "/Portfolio-main/static/js/main.acea4c53.js",
+    "static/media/img3.png": "/Portfolio-main/static/media/img3.56fd35a855c691825a80.png",
+    "static/media/img7.png": "/Portfolio-main/static/media/img7.e279dd0ff0b040bbc0b2.png",
+    "static/media/01319211609--morshed-.jpg": "/Portfolio-main/static/media/01319211609--morshed-.ea13d3f77435a1d6fa92.jpg",
+    "static/media/img1.png": "/Portfolio-main/static/media/img1.404f64baf0e5e8935f5c.png",
+    "index.html": "/Portfolio-main/index.html",
+    "main.f6d9843d.css.map": "/Portfolio-main/static/css/main.f6d9843d.css.map",
+    "main.acea4c53.js.map": "/Portfolio-main/static/js/main.acea4c53.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6d9843d.css",
+    "static/js/main.acea4c53.js"
+  ]
+}
