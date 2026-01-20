@@ -51,6 +51,7 @@ const Experience = () => {
               `}
             />
 
+            {/* Timeline Card */}
             <motion.div
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -82,7 +83,21 @@ const Experience = () => {
 
               {/* Description */}
               <div className="text-textColor leading-6 text-justify md-mx:text-sm xs-mx:text-xs">
-                {item.desc}
+                {item.desc.split(". ").map((line, idx) => (
+                  <p
+                    key={idx}
+                    className="
+                      mb-2
+                      transition-all duration-300
+                      text-textColor
+                      cursor-default
+                      hover:text-primaryColor
+                      hover:shadow-[0_0_12px_#64FFDA]
+                    "
+                  >
+                    {line}.
+                  </p>
+                ))}
               </div>
 
               {/* Skills */}
@@ -98,7 +113,9 @@ const Experience = () => {
                       text-textColor text-sm
                       hover:border-primaryColor
                       hover:text-primaryColor
+                      hover:shadow-[0_0_12px_#64FFDA]
                       transition-all duration-300
+                      cursor-default
                     "
                   >
                     {skill}
