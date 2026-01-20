@@ -1,33 +1,84 @@
-import { Avatar } from "@mantine/core";
+import React from "react";
+import { motion } from "framer-motion";
 
-const SkillBadge = (skills: []) => {
-  return skills.map((skill: any, index: number) => (
-    <div
-      key={index}
-      className="flex gap-2 border border-textColor rounded-2xl items-center py-2 px-3 bs-mx:py-0 bs-mx:px-1.5 bs-mx:gap-1 mb-1"
-    >
-      <div className="text-textColor text-xl font-medium sm-mx:text-lg xs-mx:text-sm ">
-        {skill}
-      </div>
-    </div>
-  ));
+// ------------------ SkillBadge ------------------
+interface SkillBadgeProps {
+  skills: string[];
+}
+
+const SkillBadge = ({ skills }: SkillBadgeProps) => {
+  return (
+    <>
+      {skills.map((skill, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.05, duration: 0.3 }}
+          className="
+            flex items-center gap-2
+            px-4 py-2
+            rounded-full
+            border border-textColor/40
+            bg-black/30
+            mb-1
+            text-textColor
+            text-sm
+            font-medium
+            transition-all duration-300
+            hover:border-primaryColor
+            hover:text-primaryColor
+            hover:shadow-[0_0_14px_#64FFDA60]
+            hover:-translate-y-[2px]
+            cursor-default
+            sm-mx:px-3 sm-mx:py-1.5
+            xs-mx:text-xs
+          "
+        >
+          {skill}
+        </motion.div>
+      ))}
+    </>
+  );
 };
 
-const SkillCard = (props: any) => {
+// ------------------ SkillCard ------------------
+interface SkillCardProps {
+  title: string;
+  skills: string[];
+}
+
+const SkillCard: React.FC<SkillCardProps> = ({ title, skills }) => {
   return (
-    <div
+    <motion.div
       data-aos="fade-up"
       data-aos-duration="800"
       data-aos-easing="ease-in-sine"
-      className="w-[47%] shadow-[0_0_10px_0_#64FFDA50] rounded-3xl  mb-3 border border-primaryColor p-5 bs-mx:p-3 sm-mx:w-full "
+      className="
+        w-[47%]
+        sm-mx:w-full
+        mb-4
+        rounded-3xl
+        border border-primaryColor/70
+        bg-gradient-to-br from-black/40 to-black/10
+        p-6 bs-mx:p-4
+        shadow-[0_0_14px_#64FFDA40]
+        transition-all duration-300
+        hover:shadow-[0_0_24px_#64FFDA80]
+        hover:-translate-y-1
+      "
     >
-      <div className="text-3xl mb-4 text-white text-center sm-mx:text-2xl xs-mx:text-xal font-bold ">
-        {props.title}
+      {/* Title */}
+      <h3 className="text-center text-3xl font-bold text-white mb-6 sm-mx:text-2xl">
+        {title}
+      </h3>
+
+      {/* Skills */}
+      <div className="flex flex-wrap justify-center gap-3 bs-mx:gap-2">
+        <SkillBadge skills={skills} />
       </div>
-      <div className="flex gap-3 bs-mx:gap-2 justify-center flex-wrap">
-        {SkillBadge(props.skills)}
-      </div>
-    </div>
+    </motion.div>
   );
 };
+
 export default SkillCard;
