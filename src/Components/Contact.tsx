@@ -1,9 +1,10 @@
 import { useState } from "react";
 import FloatingInput from "./FloatingInput";
 import { Button, useMatches } from "@mantine/core";
-import { IconArrowRight, IconTopologyStar3 } from "@tabler/icons-react";
+import { IconArrowRight } from "@tabler/icons-react";
 import { validateForm } from "./Validation";
-import { collection, addDoc } from "firebase/firestore";
+// import IconTopologyStar3 from "lucide-react";
+
 // import  db  from "../Firebase";
 import toast from "react-hot-toast";
 
@@ -62,7 +63,6 @@ const Contact = () => {
       >
         <div className=" text-3xl flex gap-2 items-center text-white font-semibold sm-mx:text-2xl xs-mx:text-xl">
           Let's Connect
-          <IconTopologyStar3 className="w-10 text-primaryColor h-10 sm-mx:w-7 sm-mx:h-7" />
         </div>
         <FloatingInput
           id="name"
